@@ -4,12 +4,13 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import BlackButton from '../buttons/BlackButton'
 
-const BottomNav = () => {
+const BottomNav = ({isEmail2=false}) => {
     const navigate = useNavigate()
   return (
     <div className='text-center'>
         <p className='uppercase text-3xl mb-7'>if you don't have a sprouts in your area, you can always order directly from our website!</p>
         <BlackButton handleClick={()=>navigate("/two")}  text={"Shop Now"}/>
+        <p className={`text-5xl mb-10 ${isEmail2?"block":"hidden"}`}>#NOBADHAIRDAYS</p>
         <div className="border-t border-gray-800 lg:mx-64 md:mx-40 sm:mx-12 mx-8 mb-10"></div>
         <p className='uppercase  font-bold text-lg mb-5'>follow us</p>
         <div className='flex gap-5 justify-center mb-10 '>
@@ -21,7 +22,7 @@ const BottomNav = () => {
         </div>
         <p className='text-gray-300 text-sm '>if you prefer no to receive emails like this, you may <span className='text-gray-300 underline cursor-pointer'>unsubscribe</span></p>
         <p className='text-gray-300 text-sm mb-5'>&#169; sprout. all rights reserved</p>
-        <p className='uppercase mb-20'>sprout</p>
+        <p className='uppercase pb-20'>sprout</p>
     </div>
   )
 }

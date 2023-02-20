@@ -1,18 +1,19 @@
 import React from 'react'
 import BlackButton from '../components/buttons/BlackButton'
-import CareProducts from '../components/CareProducts'
+import CareProducts from '../components/emailone/CareProducts'
+import Wow from '../components/emailone/Wow'
 import BottomNav from '../components/nav/BottomNav'
 import SproutsNav from '../components/nav/SproutsNav'
-import NearBy from '../components/NearBy'
-import Products from '../components/Products'
-import Sale from '../components/Sale'
-import Top from '../components/Top'
-import TrustR from '../components/TrustR'
-import Video from '../components/Video'
-
+import NearBy from '../components/emailone/NearBy'
+import Products from '../components/emailone/Products'
+import Sale from '../components/emailone/Sale'
+import TrustR from '../components/emailone/TrustR'
+import Video from '../components/emailone/Video'
+import "./AnnouncementOnce.css"
+import Top from '../components/emailone/Top'
 const AnnouncementOne = () => {
   return (
-    <div>
+    <div className='manColor'>
         <SproutsNav/>
         <CareProducts/>
         <Sale/>
@@ -26,6 +27,7 @@ const AnnouncementOne = () => {
         <BlackButton text="Visit Store For More"/>
         <Video/>
         <BottomNav/>
+        <Wow/>
     </div>
   )
 }
